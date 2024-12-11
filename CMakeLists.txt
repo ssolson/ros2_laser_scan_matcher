@@ -42,7 +42,13 @@ ament_target_dependencies(laser_scan_matcher
   nav_msgs
 )
 
+# Install the executable
 install(TARGETS laser_scan_matcher DESTINATION lib/${PROJECT_NAME})
 
+# Install the launch directory
+install(
+  DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 
 ament_package()
